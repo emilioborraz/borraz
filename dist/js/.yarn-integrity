@@ -1,0 +1,12 @@
+{
+  "systemParams": "darwin-x64-57",
+  "modulesFolders": [
+    "dist/js"
+  ],
+  "flags": [],
+  "linkedModules": [],
+  "topLevelPatterns": [],
+  "lockfileEntries": {},
+  "files": [],
+  "artifacts": {}
+}
