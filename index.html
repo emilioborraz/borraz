@@ -13,7 +13,7 @@
     <title>Emilio Borraz Ortega</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="dist/css/site.css" rel="stylesheet">
@@ -27,12 +27,12 @@
           <div class="row">
             <div class="col-sm-8 col-md-7 py-4">
               <h4 class="text-white">let emilio = </h4>
-              <p class="text-muted">"Código y reflexiones: PHP, JS + HTML + CSS"</p>
+              <p class="text-muted">"Código, reflexiones e inspiración"</p>
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contacto</h4>
               <ul class="list-unstyled">
-                <li><a href="https://twitter.com/emilioborraz/" class="text-white">Acá en Twitter</a></li>
+                <li><a href="https://twitter.com/emilioborraz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Seguir @emilioborraz</a></li>
               </ul>
             </div>
           </div>
@@ -54,8 +54,7 @@
       </div>
     </header>
 
-    <main role="main">
-
+    <main role="main" id="portfolioFeed">
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Código, reflexiones e inspiración.</h1>
@@ -114,22 +113,20 @@
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
-
     </main>
 
     <footer class="text-muted">
       <div class="container">
         <p class="float-right">
-          <a href="#">Back to top</a>
+          <a href="#">Arriba</a>
         </p>
         <p>
-          <a href="https://twitter.com/emilioborraz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @emilioborraz</a>
+          <a href="https://twitter.com/emilioborraz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Seguir @emilioborraz</a>
         </p>
-        <p>Thanks to &copy; Bootstrap!</p>
+        <p>Gracias Bootstrap y Vue!</p>
       </div>
     </footer>
 
@@ -137,9 +134,17 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    <!-- <script src="node_modules/popper.js/dist/popper.min.js"></script> -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/holderjs/holder.min.js"></script>
+    <script src="node_modules/vue/dist/vue.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var vm = new Vue({
+        el: '#portfolioFeed',
+        data: {
+          version: 1.0
+        }
+      });
+    </script>
   </body>
 </html>
