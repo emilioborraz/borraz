@@ -69,50 +69,13 @@
 
       <div class="album py-5 bg-light">
         <div class="container">
-
           <div class="row">
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=industrial&text=..." alt="0">
-                <div class="card-body">
-                  <p class="card-text">La información esta cargando. Contemos hasta 3, 1 2 3.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    </div>
-                    <small class="text-muted">TW</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=industrial&text=..." alt="1">
-                <div class="card-body">
-                  <p class="card-text">La información esta cargando. Contemos hasta 3, 1 2 3.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    </div>
-                    <small class="text-muted">TW</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=industrial&text=..." alt="3">
-                <div class="card-body">
-                  <p class="card-text">La información esta cargando. Contemos hasta 3, 1 2 3.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                    </div>
-                    <small class="text-muted">TW</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <wall-element
+              v-for="wallElement in wallElements"
+              v-bind:key="wallElement.id"
+              v-bind:wall-element="wallElement"
+              v-bind:get-pretty-date="getPrettyDate"
+              ></wall-element>
           </div>
         </div>
       </div>
@@ -126,7 +89,7 @@
         <p>
           <a href="https://twitter.com/emilioborraz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Seguir @emilioborraz</a>
         </p>
-        <p>Gracias Bootstrap y Vue!</p>
+        <p>Bootstrap + Vue!</p>
       </div>
     </footer>
 
@@ -135,16 +98,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="node_modules/holderjs/holder.min.js"></script>
     <script src="node_modules/vue/dist/vue.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script type="text/javascript">
-      var vm = new Vue({
-        el: '#portfolioFeed',
-        data: {
-          version: 1.0
-        }
-      });
+    <script type="text/javascript" src="dist/js/portfolioFeed.js">
     </script>
   </body>
 </html>

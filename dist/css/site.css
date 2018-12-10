@@ -1,7 +1,9 @@
 :root {
   --jumbotron-padding-y: 3rem;
 }
-
+/*
+  Header
+ */
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
@@ -46,6 +48,22 @@
   max-width: 40rem;
 }
 
+/*
+  Wall elements
+ */
+.source-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.card-body-bg-img{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+  Footer
+ */
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
